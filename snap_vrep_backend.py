@@ -18,7 +18,7 @@ linearVelocityRight = 0.01
 res,leftJointDynamic = vrep.simxGetObjectHandle(clientID, "DynamicLeftJoint", vrep.simx_opmode_oneshot_wait)
 res,rightJointDynamic = vrep.simxGetObjectHandle(clientID, "DynamicRightJoint", vrep.simx_opmode_oneshot_wait)
 
-def set_drivers():
+def set_motors():
     global linearVelocityLeft, linearVelocityRight, wheelRadius, vrep, clientID, leftJointDynamic, rightJointDynamic
     t1 = linearVelocityLeft/wheelRadius
     t2 = linearVelocityRight/wheelRadius
@@ -32,7 +32,7 @@ def up():
     global linearVelocityLeft, linearVelocityRight, wheelRadius, vrep, clientID, leftJointDynamic, rightJointDynamic
     linearVelocityLeft += 0.01
     linearVelocityRight += 0.01
-    set_drivers()
+    set_motors()
     return template('control')
 
 @route('/down')
@@ -40,7 +40,7 @@ def down():
     global linearVelocityLeft, linearVelocityRight, wheelRadius, vrep, clientID, leftJointDynamic, rightJointDynamic
     linearVelocityLeft -= 0.01
     linearVelocityRight -= 0.01
-    set_drivers()
+    set_motors()
     return template('control')
 
 @route('/left')
@@ -48,7 +48,7 @@ def left():
     global linearVelocityLeft, linearVelocityRight, wheelRadius, vrep, clientID, leftJointDynamic, rightJointDynamic
     linearVelocityLeft -= 0.01
     linearVelocityRight += 0.01
-    set_drivers()
+    set_motors()
     return template('control')
 
 @route('/right')
@@ -56,7 +56,7 @@ def right():
     global linearVelocityLeft, linearVelocityRight, wheelRadius, vrep, clientID, leftJointDynamic, rightJointDynamic
     linearVelocityLeft += 0.01
     linearVelocityRight -= 0.01
-    set_drivers()
+    set_motors()
     return template('control')
 
 run(host='localhost', port=8080)
