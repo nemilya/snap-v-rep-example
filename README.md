@@ -82,7 +82,7 @@ Problems
 --------
 
 * Q: Car not moved? 
-* A: Are user pressed "Play" button for start simulation at V-REP?
+* A: Are you pressed "Play" button for start simulation at V-REP?
 
-* Q: Port not connected `19997` (in snap_vrep_backend.py)?
-* A: see config `portIndex1_port` in `V-REP_PRO_EDU/remoteApiConnections.txt`
+* Q: Port not connected `19997` (in `snap_vrep_backend.py`)?
+* A: See config `portIndex1_port` in `V-REP_PRO_EDU/remoteApiConnections.txt`
