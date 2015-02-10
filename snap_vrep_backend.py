@@ -9,18 +9,14 @@ print ('Program started')
 vrep.simxFinish(-1) # just in case, close all opened connections
 clientID=vrep.simxStart('127.0.0.1',19997,True,True,5000,5)
 
+# TODO refactoring
+
 wheelRadius = 0.027
 linearVelocityLeft = 0.01
 linearVelocityRight = 0.01
-#    while vrep.simxGetConnectionId(clientID) != -1:
+
 res,leftJointDynamic = vrep.simxGetObjectHandle(clientID, "DynamicLeftJoint", vrep.simx_opmode_oneshot_wait)
 res,rightJointDynamic = vrep.simxGetObjectHandle(clientID, "DynamicRightJoint", vrep.simx_opmode_oneshot_wait)
-
-#        elif char == '2':
-#          linearVelocityLeft -= 0.01
-#          linearVelocityRight -= 0.01
-
-print linearVelocityLeft
 
 def set_drivers():
     global linearVelocityLeft, linearVelocityRight, wheelRadius, vrep, clientID, leftJointDynamic, rightJointDynamic
