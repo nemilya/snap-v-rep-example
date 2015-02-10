@@ -60,7 +60,7 @@ Test API web control
 * http://localhost:8080/right
 
 
-See moving or line follower at V-REP.
+See moving of LineFollower at V-REP.
 
 
 Start Snap!
