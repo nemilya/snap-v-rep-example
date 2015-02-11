@@ -4,6 +4,9 @@ Snap! V-REP example
 This is simple "proof of concept" of controlling V-REP 3d robotics simulation world 
 from Snap! web-based Scratch-like system.
 
+![](snap-v-rep-example.jpg)
+
+
 Files
 -----
 
@@ -11,6 +14,7 @@ Files
 * `/views` - for html template for web-backend
 * `.gitignore` - exclude some files
 * `README.md` - this file
+* `snap-v-rep-example.jpg` - screenshot with annotations
 * `snap_vrep_backend.py` - web-backed for web API
 * `v-rep_demo.xml` - Snap! demo project
 * `remoteApi.dll` - files needed to work with V-REP API
@@ -56,6 +60,18 @@ To install `bottle` in console:
 `bottle` - is web framework.
 
 
+Start V-REP
+-----------
+
+Open `scena/simpleLineFollower_api.ttt` file - starting V-REP.
+
+Or Start V-REP and open from menu "File", "Open scene...".
+
+`simpleLineFollower_api.ttt` is simple LineFollower (without Lua embedded script).
+
+Start Simulation by press on "Play" button or from menu "Simulation", "Start simulation".
+
+
 Start API backend
 -----------------
 
@@ -64,15 +80,6 @@ In console:
     python snap_vrep_backend.py 
 
 Bottle started at `8080` port.
-
-Start V-REP
------------
-
-Start V-REP and open `scena/simpleLineFollower_api.ttt` file.
-
-It's simple LineFollower (without Lua embedded script).
-
-Start Simulation by press on "Play" button.
 
 Test API web control
 --------------------
