@@ -10,13 +10,13 @@ Download from http://www.coppeliarobotics.com/downloads.html
 Copy DLL for API
 ----------------
 
-Copy files from `[Program Files]\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\python\python`
+Copy 2 files (Python wrapper and constants for API) from folder `[Program Files]\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\python\python`:
 
 
 * vrep.py
 * vrepConst.py
 
-Copy `remoteApi.dll` from "[Program Files]\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\lib\lib\", folder:
+Copy `remoteApi.dll` from "[Program Files]\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\lib\lib\", folder (according to your machine 32/64bit):
 
 * 32Bit
 * 64Bit
@@ -32,7 +32,7 @@ Install Python
 
     pip install bottle
 
-bottle - is web framework.
+`bottle` - is web framework.
 
 
 Start API backend
@@ -47,12 +47,14 @@ Start V-REP
 
 Start V-REP and open `scena/simpleLineFollower_api.ttt` file.
 
-It's simple LineFollower without Lua embedded script.
+It's simple LineFollower (without Lua embedded script).
 
 Start Simulation by press on "Play" button.
 
 Test API web control
 --------------------
+
+Open in browser URL:
 
 * http://localhost:8080/up
 * http://localhost:8080/down
@@ -60,21 +62,21 @@ Test API web control
 * http://localhost:8080/right
 
 
-See moving of LineFollower at V-REP.
+See moving of LineFollower at V-REP. If not moving see section "Problems".
 
 
 Start Snap!
 -----------
 
-Open: http://snap.berkeley.edu/snapsource/snap.html
+Open demo Snap! application: http://snap.berkeley.edu/snapsource/snap.html#cloud:Username=nemilya&ProjectName=v-rep_demo
 
-Drag and drop file `v-rep_demo.xml`
+Or open: http://snap.berkeley.edu/snapsource/snap.html and Drag and drop file `v-rep_demo.xml` to browser.
 
 Press curson up/down/left/right - see reaction of car at V-REP
 
 Press w/a/d - see reaction of car at V-REP.
 
-Custom blocks: up/down/left/right
+Was created custom blocks: "up", "down", "left", "right". Each block just call "Report" block, with URL request (to `http://localhost:8080/ACTION`).
 
 
 
