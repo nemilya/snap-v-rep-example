@@ -13,13 +13,13 @@ Copy DLL for API
 Copy 2 files (Python wrapper and constants for API) from folder `[Program Files]\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\python\python`:
 
 
-* vrep.py
-* vrepConst.py
+* `vrep.py`
+* `vrepConst.py`
 
-Copy `remoteApi.dll` from "[Program Files]\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\lib\lib\", folder (according to your machine 32/64bit):
+Copy `remoteApi.dll` from `[Program Files]\V-REP3\V-REP_PRO_EDU\programming\remoteApiBindings\lib\lib\`, folder (according to your machine 32/64bit architecture):
 
-* 32Bit
-* 64Bit
+* `32Bit`
+* `64Bit`
 
 To current folder.
 
@@ -30,6 +30,8 @@ Install Python
 * Python27
 * bottle
 
+To install `bottle` in console:
+
     pip install bottle
 
 `bottle` - is web framework.
@@ -37,6 +39,8 @@ Install Python
 
 Start API backend
 -----------------
+
+In console:
 
     python snap_vrep_backend.py 
 
@@ -74,9 +78,9 @@ Or open: http://snap.berkeley.edu/snapsource/snap.html and Drag and drop file `v
 
 Press curson up/down/left/right - see reaction of car at V-REP
 
-Press w/a/d - see reaction of car at V-REP.
+Press "w", "a", "d" keys - see reaction of car at V-REP.
 
-Was created custom blocks: "up", "down", "left", "right". Each block just call "Report" block, with URL request (to `http://localhost:8080/ACTION`).
+In Snap! was created custom blocks: "up", "down", "left", "right". Each block just call "Report" block, with URL request (to `http://localhost:8080/ACTION`).
 
 
 
@@ -86,5 +90,5 @@ Problems
 * Q: Car not moved? 
 * A: Are you pressed "Play" button for start simulation at V-REP?
 
-* Q: Port not connected `19997` (in `snap_vrep_backend.py`)?
+* Q: Python backent cant connect to `19997` port (in `snap_vrep_backend.py`)?
 * A: See config `portIndex1_port` in `V-REP_PRO_EDU/remoteApiConnections.txt`
