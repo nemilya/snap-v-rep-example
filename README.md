@@ -46,7 +46,7 @@ To current folder.
 Install Python
 --------------
 
-* Python27
+* Python27 - from https://www.python.org/downloads/ [version 2.7.9]
 * bottle
 
 To install `bottle` in console:
