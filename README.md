@@ -1,6 +1,25 @@
 Snap! V-REP example
 ===================
 
+This is simple "proof of concept" of controlling V-REP 3d robotics simulation world 
+from Snap! web-based Scratch-like system.
+
+Files
+-----
+
+* `/scena` - folder with simple V-REP's scene
+* `/views` - for html template for web-backend
+* `.gitignore` - exclude some files
+* `README.md` - this file
+* `snap_vrep_backend.py` - web-backed for web API
+* `v-rep_demo.xml` - Snap! demo project
+* `remoteApi.dll` - files needed to work with V-REP API
+* `vrep.py` - python wrapper for DLL
+* `vrepConst.py` - constants for V-REP API
+
+Files `remoteApi.dll`, `vrep.py` and `vrepConst.py` have to be taken from V-REP installation folder.
+
+
 Install V-REP
 -------------
 
