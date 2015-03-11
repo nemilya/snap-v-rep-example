@@ -6,6 +6,7 @@ from Snap! web-based Scratch-like system.
 
 ![](snap-v-rep-example.jpg)
 
+[Open image in full-size](https://raw.githubusercontent.com/nemilya/snap-v-rep-example/master/snap-v-rep-example.jpg)
 
 Files
 -----
